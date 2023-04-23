@@ -4,7 +4,7 @@ const produtorio = new produtorioService();
 var router = express.Router();
 
 router.get('/', (req, res) => {
-    let resultado = produtorio.checaInput(req.query.limiteInferior, req.query.limiteSuperior, req.query.tipo)
+    let resultado = produtorio.checaInput(req.query.m, req.query.n, req.query.tipo)
 
     if (resultado.valido) {
         switch (resultado.tipo) {
